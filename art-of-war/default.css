@@ -1,0 +1,235 @@
+/*#############################################################
+Name: AOW
+Date: 2015-12-2
+Description: homepage for art of war (this is the used ccs file)
+Author: Chris Galletta
+
+#############################################################*/
+
+/* standard elements */
+* 
+{
+	margin: 0;
+	padding: 0;
+}
+
+a {color: #36C;}
+
+a:hover {color: #06F;}
+
+body 
+{
+	background: #4E5D3C url(img/bg.jpg);
+	color: #444;
+	font: normal 62.5% "Lucida Sans Unicode",sans-serif;
+	margin: 0;
+}
+
+p,blockquote,ul {margin-bottom: 1.2em;font-size:1.25em;}
+
+h1 {font: normal 1.6em serif;}
+
+h2 
+{
+	font: bold 1em Verdana,serif;
+	margin: 3px 0 1px;
+}
+
+ul {margin-left: 1.8em;}
+
+blockquote 
+{
+	background: url(img/quote.gif) no-repeat;
+	color: #555;
+	font: normal 1.4em serif;
+	padding-left: 22px;
+}
+
+blockquote p {padding: 6px;}
+
+
+
+
+
+/* misc */
+.clearer {clear: both;}
+
+.left {float: left;}
+
+.right {float: right;}
+
+img.left {margin: 18px 6px ;}
+
+img.center {margin: 6px 0px;}
+
+.divider 
+{
+	background: url(img/divider.gif) no-repeat;
+	height: 20px;
+	margin: 24px 0;
+}
+
+/* structure */
+.container 
+{
+	background: url(img/bgcontainer.jpg) repeat center top;
+	margin: auto;
+	width: 1032px;
+}
+
+.gfx 
+{
+	background: url(img/gfx.jpg) no-repeat;
+	float: left;
+	position: relative;
+	right: -70px;
+	bottom: -95px;
+	height: 140px;
+	margin-top: 12px;
+	width: 52px;
+}
+
+.top 
+{
+	background: url(img/bgcontent.gif) no-repeat 40px -4%;
+	margin: -152px 0px 0px 0px;
+	float: left;
+	text-align: center;
+	width: 1008px;
+}
+
+.header 
+{
+	background: #56644A url(img/header.jpg) no-repeat;
+    margin-left: 24px;
+	color: #FFC;
+	font-size: 1.4em;
+	height: 232px;
+	padding-right: 180px;
+}
+
+.header h1 
+{
+	font: normal 3.2em serif,sans-serif;
+	padding: 62px 0 34px 0;
+}
+
+.pattern 
+{
+	background: #334127 url(img/pattern.gif) repeat-x;
+	clear: both;
+	height: 12px;
+    width: 986px;
+    margin-left: 23px;
+}
+
+/* navigation */
+.navigation {margin: 0 24px;}
+
+.navigation a 
+{
+	color: #6C7151;
+	font: normal 1.9em serif;
+	line-height: 50px;
+	margin: 0 16px;
+	text-decoration: none;
+}
+
+.navigation a:hover,.navigation #selected 
+{
+	color: #2C3111;
+}
+
+/* content */
+.content 
+{
+	background: url(img/bgcontent.gif) no-repeat;
+	clear: both;
+	font-size: 1.2em;
+	margin: 0 52px;
+	padding: 0 38px 12px;
+}
+
+.content .spacer 
+{
+	height: 42px;
+}
+
+/* content item */
+.item {clear: both;}
+
+.item img {border: 1px dashed #8A6;}
+
+.item .title 
+{
+	color: #445044;
+	font: normal 2em serif;
+}
+
+.item .title:first-letter 
+{
+	display: block;
+	float: left;
+	font-size: 2.4em;
+}
+
+.item .metadata 
+{
+	color: #666;
+	font-size: 0.9em;
+	float: left;
+	padding: 0 0 6px 4px;
+}
+
+.item .body 
+{
+	clear: both;
+}
+
+
+.footer2 
+{
+	background: url(img/bgfooter.gif) no-repeat;
+	color: #666;
+	font-size: 1.1em;
+	line-height: 41px; 
+	margin: 0 -28px;
+	text-align: center;
+	width: 1032px;
+}
+
+.footer2 b 
+{
+	color: #666;
+	text-decoration: none;
+}
+
+.footer2 b:hover 
+{
+	color: #333;
+	text-decoration: underline;
+}
+
+/* footer */
+.footer 
+{
+	background: url(img/bgfooter.gif) no-repeat;
+	color: #666;
+	font-size: .75em;
+	line-height: 41px; 
+	margin: 0 -38px;
+	text-align: center;
+	width: 1032px;
+}
+
+.footer a 
+{
+	color: #666;
+	text-decoration: none;
+}
+
+.footer a:hover 
+{
+	color: #333;
+	text-decoration: underline;
+}
