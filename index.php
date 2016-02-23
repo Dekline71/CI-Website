@@ -5,6 +5,12 @@
 			<title>Conscious Interactive - </title>
 			<link rel="stylesheet" href="styles.css" type="text/css" />
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+			<meta property="og:locale" content="en_US" />
+			<meta property="og:type" content="website" />
+			<meta property="og:title" content="Conscious Interactive - Art of war: mediolanum, Game design, Programming and more" />
+			<meta property="og:description" content="Conscious Interactive - A student dev blog on the current development Art of War: Mediolanum, Game design, Programming and more" />
+			<meta property="og:url" content="http://www.consciousinteractive.com/" />
+			<meta property="og:site_name" content="Conscious Interactive" />
       </head>
 
 
