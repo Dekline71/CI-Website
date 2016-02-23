@@ -17,47 +17,47 @@
 	 	 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
    	<body>
-<?php
+
+			<?php
 
 
 
-	if (file_exists('useron.txt'))
+				if (file_exists('useron.txt'))
+				{
 
-	{
+					$fil = fopen('useron.txt', r);
 
-		$fil = fopen('useron.txt', r);
+					$dat = fread($fil, filesize('useron.txt'));
 
-		$dat = fread($fil, filesize('useron.txt'));
+					//echo $dat+1;
 
-		//echo $dat+1;
+					fclose($fil);
 
-		fclose($fil);
+					$fil = fopen('useron.txt', w);
 
-		$fil = fopen('useron.txt', w);
+					fwrite($fil, $dat+1);
 
-		fwrite($fil, $dat+1);
-
-	}
-
-
-
-	else
-
-	{
-
-		$fil = fopen('useron.txt', w);
-
-		fwrite($fil, 1);
-
-		//echo '1';
-
-		fclose($fil);
-
-	}
+				}
 
 
 
-?>
+				else
+
+				{
+
+					$fil = fopen('useron.txt', w);
+
+					fwrite($fil, 1);
+
+					//echo '1';
+
+					fclose($fil);
+
+				}
+
+
+
+			?>
 
 		  <div id="container">
 
@@ -139,63 +139,77 @@
 
 
 					<li>
-					<p>
-					<span class="newslist-date">Long overdue delayed update - Aug 20</span>
-						  Wow i cannot believe its already half way through August, the time really flys when your in the thick of development. I have a alot to write about but ill try to keep it brief.
-					</p>
+						<p>
+							<article class="expanded">
+								<h2>Long overdue delayed update - Aug 20</h2>
+								<p>
+						  		Wow i cannot believe its already half way through August, the time really flys when your in the thick of development. I have a alot to write about but ill try to keep it brief.
+								</p>
 
-
-							 			<img class="left" src="aow/img/mapb4After.jpg" width=800" height="382" alt="art of war game mediolanum map b4 and After"/>
-					<p>
+					 			<img class="left" src="aow/img/mapb4After.jpg" width="800" height="382" alt="art of war game mediolanum map b4 and After"/>
+								<p>
 										<a href="aow/blog-4-update.php" class="button" alt="Read More">Read more</a>
-					</p>
-										<p>
-										</p>
-					</li>
-
-					<li>
-						<p>
-						<span class="newslist-date-two">Quick update - April 21</span>
-							  this week i have added a new functional player unit into the game, the ranged Celtic archer.
-							  The ranged archer unit can attack farther than a melee unit can. However the archer unit has no armor, so their vulnerable to close melee attacks.
-							  Since archers have no armor they deal just bit more damage than the average melee units do. I will post an image below of the rough implementation.
-
-
-						   <p>
-						      			 <img class="center" src="aow/img/archerTestAOW.gif" width="282" height="141" alt="art of war game mediolanum archerTest"/>
-						   </p>
- 						   <p>
-						   <a href="aow/blog-3-update.php" class="button" alt="Read More">Read more</a>
- 						   </p>
-					</li>
-
-					<li>
-						<p>
-						<span class="newslist-date-three">The combat system - April 13</span>
-							  This week ive put some time into the combat system of Art of War. While your trying to conquer England or not, you will be engaged in combat. To capture the essance of Sun Tzu's document The Art of War(T.A.O.W.) and as a fan a of Japanese and Chinese board games like Go,
-
-							 ive influenced the game board to be a square grid based like Go (if you have not played Go i suggest you do!).
+								</p>
+								<p>
+								</p>
+							</article>
 						</p>
-						   <a href="aow/blog-2-combat.php" class="button" alt="Read More">Read more</a>
-						   <p></p>
 					</li>
 
 					<li>
 						<p>
-						<span class="newslist-date">WTF is art of war? - April 10</span>
-	                   			Art of War is a turn based strategy game i have been developing for the past couple months based on an over 2,000 year old ancient Chinese military document titled, The Art of War.
+							<article class="expanded">
+								<h2>Quick Update</h2>
+									<div class="article-info">Posted on <time datetime="2013-04-21">21 April</time> by <a href="#" rel="author">C Galletta</a></div>
+							  	this week i have added a new functional player unit into the game, the ranged Celtic archer.
+							  	The ranged archer unit can attack farther than a melee unit can. However the archer unit has no armor, so their vulnerable to close melee attacks.
+							  	Since archers have no armor they deal just bit more damage than the average melee units do. I will post an image below of the rough implementation.
+						   		<p>
+						      	<img class="center" src="aow/img/archerTestAOW.gif" width="282" height="141" alt="art of war game mediolanum archerTest"/>
+						   		</p>
+ 						   		<p>
+						   			<a href="aow/blog-3-update.php" class="button" alt="Read More">Read more</a>
+ 					 				</p>
+							</article>
+						</p>
+					</li>
+
+					<li>
+						<p>
+							<article class="expanded">
+								<h2>The Combat System </h2>
+									<div class="article-info">Posted on <time datetime="2013-04-13">13 April</time> by <a href="#" rel="author">C Galletta</a></div>
+									  This week ive put some time into the combat system of Art of War. While your trying to conquer England or not, you will be engaged in combat. To capture the essance of Sun Tzu's document The Art of War(T.A.O.W.) and as a fan a of Japanese and Chinese board games like Go,
+							 			ive influenced the game board to be a square grid based like Go (if you have not played Go i suggest you do!).
+						</p>
+						 <a href="aow/blog-2-combat.php" class="button" alt="Read More">Read more</a>
+						  <p></p>
+						 </article>
+					</li>
+
+					<li>
+						<p>
+							<article class="expanded">
+
+											<h2>WTF is art of war? </h2>
+								<div class="article-info">Posted on <time datetime="2013-04-10">10 April</time> by <a href="#" rel="author">C Galletta</a></div>
+
+	                   <p>			Art of War is a turn based strategy game i have been developing for the past couple months based on an over 2,000 year old ancient Chinese military document titled, The Art of War.
 								Being facinated by history my whole life. I wanted to make a game that puts the player in a position of power during a specific time in history.
 
 								With my recent big interest in english history, ive given control to the player over a small bronze age celtic tribe in England. Crucial economic and political decisions as well
 
 								as scientific/techological advancement choices will be made that shape your rule, whether you focus more on military, economics, or agriculture.</p>
-						   		 <a href="aow/blog-1-wtf.php" class="button" alt="Read More">Read more</a>
+
+									 <a href="art-of-war/blog-1-wtf.php" class="button" alt="Read More">Read more</a>
 								 <p></p>
 								 <!--<a href="#" class="view-all-button" alt="View All">V i e w  A l l</a>-->
 					</li>
+				</article>
+
 
 			</ul>
-                </li>
+
 
 
 		<!--<a href="#" class="button button-reversed">Comments</a> -->
