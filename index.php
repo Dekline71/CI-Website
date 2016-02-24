@@ -13,7 +13,6 @@
 			<meta property="og:site_name" content="Conscious Interactive" />
       </head>
 
-
 	 	 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
    	<body>
@@ -35,7 +34,6 @@
 				}
 				else
 				{
-
 					$fil = fopen('useron.txt', w);
 
 					fwrite($fil, 1);
@@ -65,15 +63,15 @@
 
 							<li><a href="news.html"><i class="fa fa-newspaper-o"></i> N e w s / B l o g</a></li>
 
-							<li><a href="aow/aowIndex.php"><i class="fa fa-fort-awesome"></i> Art of War: Mediolanum</a></li>
+							<li><a href="art-of-war/aowIndex.php"><i class="fa fa-fort-awesome"></i> Art of War: Mediolanum</a></li>
 
 							<li><a href="projects.html"><i class="fa fa-briefcase"></i> P r o j e c t s</a></li>
 
-							<li><a href="media.php"><i class="fa fa-film"></i> M e d i a</a></li>
+							<li><a href="media.html"><i class="fa fa-film"></i> M e d i a</a></li>
 
-							<li><a href="contact.php"><i class="fa fa-envelope-o"></i> C o n t a c t</a></li>
+							<li><a href="contact.html"><i class="fa fa-envelope-o"></i> C o n t a c t</a></li>
 
-							<li><a href="about.php"><i class="fa fa-info-circle"></i> A b o u t</a></li>
+							<li><a href="about.html"><i class="fa fa-info-circle"></i> A b o u t</a></li>
         		</ul>
 
     	  </nav>
