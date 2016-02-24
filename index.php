@@ -19,12 +19,8 @@
    	<body>
 
 			<?php
-
-
-
 				if (file_exists('useron.txt'))
 				{
-
 					$fil = fopen('useron.txt', r);
 
 					$dat = fread($fil, filesize('useron.txt'));
@@ -36,13 +32,8 @@
 					$fil = fopen('useron.txt', w);
 
 					fwrite($fil, $dat+1);
-
 				}
-
-
-
 				else
-
 				{
 
 					$fil = fopen('useron.txt', w);
@@ -52,11 +43,7 @@
 					//echo '1';
 
 					fclose($fil);
-
 				}
-
-
-
 			?>
 
 		  <div id="container">
@@ -76,20 +63,20 @@
 	  			<ul>
         			<li class="start selected"><a href="index.php"><i class="fa fa-home"></i> H o m e</a></li>
 
-					<li><a href="news.html"><i class="fa fa-newspaper-o"></i> N e w s / B l o g</a></li>
+							<li><a href="news.html"><i class="fa fa-newspaper-o"></i> N e w s / B l o g</a></li>
 
-					<li><a href="aow/aowIndex.php"><i class="fa fa-fort-awesome"></i> Art of War: Mediolanum</a></li>
+							<li><a href="aow/aowIndex.php"><i class="fa fa-fort-awesome"></i> Art of War: Mediolanum</a></li>
 
-					<li><a href="projects.html"><i class="fa fa-briefcase"></i> P r o j e c t s</a></li>
+							<li><a href="projects.html"><i class="fa fa-briefcase"></i> P r o j e c t s</a></li>
 
-					<li><a href="media.php"><i class="fa fa-film"></i> M e d i a</a></li>
+							<li><a href="media.php"><i class="fa fa-film"></i> M e d i a</a></li>
 
-					<li><a href="contact.php"><i class="fa fa-envelope-o"></i> C o n t a c t</a></li>
+							<li><a href="contact.php"><i class="fa fa-envelope-o"></i> C o n t a c t</a></li>
 
-					<li><a href="about.php"><i class="fa fa-info-circle"></i> A b o u t</a></li>
+							<li><a href="about.php"><i class="fa fa-info-circle"></i> A b o u t</a></li>
         		</ul>
 
-    	</nav>
+    	  </nav>
 
        	</div>
     	</header>
@@ -100,13 +87,16 @@
 
 	    	 <article>
 
-		    	   <h6>Announcements, News, Thoughts, Updates, etc</h6>
+		    	<h6>Announcements, News, Thoughts, Updates, etc</h6>
 
 					<ul class="newslist">
 					<li>
 					<p>
-					<span class="newslist-date-two">Fallout 4 and restructuring the core - Dec 6</span>
-				   		  				 		  With classes just about over for me and the current release of Fallout 4, ive managed to sink a
+					<article class="expanded">
+						<h2>Fallout 4 and restructuring the core - Dec 6</h2>
+						<div class="article-info">Posted on <time datetime="2015-11-06">06 Dec</time> by <a href="#" rel="author">C Galletta</a></div>
+
+				   		With classes just about over for me and the current release of Fallout 4, ive managed to sink a
 						  bit of time into it. Now that ive had my fallout fix. At the end of lvl 31. With a little over 3.5 full days of gameplay experienced,
 						  i cant help but have a bittersweet feeling. Ive avoided most of the story. So i wont mention it too much or at all.
 					</p>
@@ -118,37 +108,44 @@
 						 </p>
 										<p>
 										</p>
+									</article>
 					</li>
 
 					<li>
-					<p>
-					<span class="newslist-date-two">Summer Time and Java Runtime - Sep 25</span>
+						<p>
+						<article class="expanded">
+							<h2>Summer Time and Java Runtime</h2>
+							<div class="article-info">Posted on <time datetime="2015-09-25">25 Sept</time> by <a href="#" rel="author">C Galletta</a></div>
+
 				   		  Septembers been a busy month so far, editing 2,3 trailers, a failed greenlight campaign and art
 				   		  assets overhauls. It has been a very exciting experience to put something out there on the internet and recieve feedback.
 				   		  I didnt want to put it up on steam till i knew the game ran on all 3 platforms(Win,Mac,&Linux).
-					</p>
-						  <img class="left" src="aow/img/aowboxArt.png" width="512" height="512" alt="Art of war mediolanum box art"/>
 
+						  	<img class="left" src="art-of-war/img/aowboxArt.png" width="512" height="512" alt="Art of war mediolanum box art"/>
 
-						  <p>
-										<a href="aow/blog-5-update.php" class="button" alt="Read More">Read more</a>
+						  	<p>
+									<a href="art-of-war/blog-5-update.php" class="button" alt="Read More">Read more</a>
+						  	</p>
+								<p>
+								</p>
+							</article>
 						</p>
-										<p>
-										</p>
 					</li>
 
 
 					<li>
 						<p>
 							<article class="expanded">
-								<h2>Long overdue delayed update - Aug 20</h2>
+								<h2>Long overdue delayed update</h2>
+								<div class="article-info">Posted on <time datetime="2015-04-21">20 Aug</time> by <a href="#" rel="author">C Galletta</a></div>
+
 								<p>
 						  		Wow i cannot believe its already half way through August, the time really flys when your in the thick of development. I have a alot to write about but ill try to keep it brief.
 								</p>
 
-					 			<img class="left" src="aow/img/mapb4After.jpg" width="800" height="382" alt="art of war game mediolanum map b4 and After"/>
+					 			<img class="left" src="art-of-war/img/mapb4After.jpg" width="800" height="382" alt="art of war game mediolanum map b4 and After"/>
 								<p>
-										<a href="aow/blog-4-update.php" class="button" alt="Read More">Read more</a>
+										<a href="art-of-war/blog-4-update.php" class="button" alt="Read More">Read more</a>
 								</p>
 								<p>
 								</p>
@@ -160,7 +157,7 @@
 						<p>
 							<article class="expanded">
 								<h2>Quick Update</h2>
-									<div class="article-info">Posted on <time datetime="2013-04-21">21 April</time> by <a href="#" rel="author">C Galletta</a></div>
+									<div class="article-info">Posted on <time datetime="2015-04-21">21 April</time> by <a href="#" rel="author">C Galletta</a></div>
 							  	this week i have added a new functional player unit into the game, the ranged Celtic archer.
 							  	The ranged archer unit can attack farther than a melee unit can. However the archer unit has no armor, so their vulnerable to close melee attacks.
 							  	Since archers have no armor they deal just bit more damage than the average melee units do. I will post an image below of the rough implementation.
@@ -178,7 +175,7 @@
 						<p>
 							<article class="expanded">
 								<h2>The Combat System </h2>
-									<div class="article-info">Posted on <time datetime="2013-04-13">13 April</time> by <a href="#" rel="author">C Galletta</a></div>
+									<div class="article-info">Posted on <time datetime="2015-04-13">13 April</time> by <a href="#" rel="author">C Galletta</a></div>
 									  This week ive put some time into the combat system of Art of War. While your trying to conquer England or not, you will be engaged in combat. To capture the essance of Sun Tzu's document The Art of War(T.A.O.W.) and as a fan a of Japanese and Chinese board games like Go,
 							 			ive influenced the game board to be a square grid based like Go (if you have not played Go i suggest you do!).
 						</p>
@@ -192,7 +189,7 @@
 							<article class="expanded">
 
 											<h2>WTF is art of war? </h2>
-								<div class="article-info">Posted on <time datetime="2013-04-10">10 April</time> by <a href="#" rel="author">C Galletta</a></div>
+								<div class="article-info">Posted on <time datetime="2015-04-10">10 April</time> by <a href="#" rel="author">C Galletta</a></div>
 
 	                   <p>			Art of War is a turn based strategy game i have been developing for the past couple months based on an over 2,000 year old ancient Chinese military document titled, The Art of War.
 								Being facinated by history my whole life. I wanted to make a game that puts the player in a position of power during a specific time in history.
@@ -219,7 +216,7 @@
 		<article class="expanded">
 
             <h2>Buy unbranded</h2>
-			<div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">C Galletta</a></div>
+			<div class="article-info">Posted on <time datetime="2015-05-14">14 May</time> by <a href="#" rel="author">C Galletta</a></div>
 
 
             <p>Purchasing a template license for 8.00 GBP (at time of writing around 12 USD) gives you the right to remove any branding including links, logos and source tags relating to ZyPOP. As well as waiving the attribution requirement, your payment will also help us provide continued support for users as well as creating new web templates. Find out more about how to buy at the licensing page on our website which can be accessed at <a href="http://zypopwebtemplates.com/licensing" title="template license">http://zypopwebtemplates.com/licensing</a></p>
