@@ -114,11 +114,11 @@
 						<article class="expanded">
 							<h2>Summer Time and Java Runtime</h2>
 							<div class="article-info">Posted on <time datetime="2015-09-25">25 Sept</time> by <a href="#" rel="author">C Galletta</a></div>
-
+								<p>
 				   		  Septembers been a busy month so far, editing 2,3 trailers, a failed greenlight campaign and art
 				   		  assets overhauls. It has been a very exciting experience to put something out there on the internet and recieve feedback.
 				   		  I didnt want to put it up on steam till i knew the game ran on all 3 platforms(Win,Mac,&Linux).
-
+							  </p>
 						  	<img class="left" src="art-of-war/img/aowboxArt.png" width="512" height="512" alt="Art of war mediolanum box art"/>
 
 						  	<p>
@@ -134,7 +134,7 @@
 					<li>
 						<p>
 							<article class="expanded">
-								<h2>Long overdue delayed update</h2>
+								<h2>Long Overdue Delayed Update</h2>
 								<div class="article-info">Posted on <time datetime="2015-04-21">20 Aug</time> by <a href="#" rel="author">C Galletta</a></div>
 
 								<p>
