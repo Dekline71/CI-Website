@@ -1,4 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:300,400,700);
+
 
 body
 {
@@ -11,7 +14,7 @@ body
 	color: #ccc;
 	font-weight: 800;
 }
-      
+
 *
 {
 	margin:0;
@@ -83,11 +86,21 @@ para
 
 p
 {
-	line-height: 1.9em;
+	line-height: 1.2em;
 	margin-bottom: 20px;
+	font-family: 'Yanone Kaffeesatz','Fira Sans';
+}
+
+#aboutHead p
+{
+	font-size: 2.5em;
 
 }
 
+#aboutFont p
+{
+		font-size: 1.5em;
+}
 
 a.view-all-button
 {
@@ -117,6 +130,18 @@ a.view-all-button-reversed
 a.view-all-button-reversed:hover
 {
 	background-color: #9EA0A5;
+}
+
+a.noUnderlineLink :hover
+{
+	border-bottom: none;
+}
+
+a.noUnderlineLink
+{
+	text-decoration: none;
+	border-bottom: none;
+
 }
 
 a
@@ -340,7 +365,6 @@ header h1 a, header h1 a:hover
 
 }
 
-
 nav
 {
 	width: 100%;
@@ -357,7 +381,7 @@ nav ul
 nav ul li
 {
 	display: inline;
-	padding: 0px 5px;
+	padding: 0px 5px 0px 0px;
 }
 
 
@@ -502,7 +526,6 @@ article .article-info a
 	color: #999;
 }
 
-
 .sidebar ul li a
 {
 	color: #999;
@@ -514,8 +537,6 @@ article .article-info a
 	color: #ccc;
 	border-bottom-color: #ccc;
 }
-
-
 
 .sidebar ul li.bg
 {
@@ -681,8 +702,6 @@ ul.newslist span.newslist-date-three
 
 	footer .footer-content ul { width: auto; float: none; }
 }
-
-
 
 @media screen and (max-width: 540px)
 {
