@@ -21,6 +21,18 @@ body
 	padding:0;
 }
 
+.avatar
+{
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  margin-right: 10px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+
 /** element defaults **/
 table
 {
@@ -88,18 +100,22 @@ p
 {
 	line-height: 1.2em;
 	margin-bottom: 20px;
-	font-family: 'Yanone Kaffeesatz','Fira Sans';
+	font-family: 'Fira Sans';
 }
 
-#aboutHead p
+#aboutHead
 {
-	font-size: 2.5em;
-
+	font-size: 1.05em;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-#aboutFont p
+.aboutMargin
 {
-		font-size: 1.5em;
+	/*    top | right| bottom |left */
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 1.1em;
 }
 
 a.view-all-button
@@ -628,6 +644,12 @@ article .article-info a
 .clear
 {
 	clear: both;
+}
+
+/* Default Font*/
+#defFont
+{
+	font-family: 'Yanone Kaffeesatz';
 }
 
 bfooter
