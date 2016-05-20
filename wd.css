@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
-@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+
 
 /* CSS Reset */
 * { padding: 0; margin: 0; }
@@ -60,7 +61,7 @@ h3
 {
   height: 395px;
   background-image: url("img/header_5.jpg");
-  background-size:cover;
+  background-size: cover;
   background-position: top;
   box-shadow: inset 0 0 2em black;
 }
@@ -94,7 +95,7 @@ h3
   background-image: url("img/office2.jpg");
   background-size: cover;
   background-position: top;
-  max-height: 260px;
+  max-height: 460px;
   min-height: 190px;
   overflow: hidden;
 }
@@ -112,7 +113,6 @@ h3
   -moz-border-image: url("img/wood.jpg") 10 10 11 stretch;
   -o-border-image: url("img/wood.jpg") 10 10 11 stretch;
   border-image: url("img/wood.jpg") 10 10 11 stretch;
-  color: white;
 }
 
 #services
@@ -123,6 +123,7 @@ h3
   font-weight: bolder;
   font-family: 'Titillium Web', sans-serif;
   list-style: none;
+  color: white;
 }
 
 .services
@@ -131,6 +132,38 @@ h3
   text-align: center;
   padding-top: 6px;
   text-decoration: underline;
+  color: hsl(135, 40%, 55%);
+}
+
+#missionBoard
+{
+  min-width: 120px;
+  max-width: 295px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("img/chalk.jpg");
+  background-size: cover;
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  -moz-border-image: url("img/wood.jpg") 10 10 11 stretch;
+  -o-border-image: url("img/wood.jpg") 10 10 11 stretch;
+  border-image: url("img/wood.jpg") 10 10 11 stretch;
+}
+
+.chalk
+{
+  color: white;
+  font-family: 'Lobster', serif;
+  font-weight: lighter;
+}
+
+.chalkPrint
+{
+  display: inline;
+  color: white;
+  font-size: 12px;
+  font-family: 'Fira Sans', serif;
 }
 
 #plans
@@ -138,9 +171,8 @@ h3
   /*max-height: 675px;*/
   color: honeydew;
   box-shadow: inset 0 0 1.5em black;
-  /*background-image: url("img/plansBackground.svg");
-  background-position: right 0px top 0px;
-  background-repeat: no-repeat;*/
+  background-image: url("img/grunge.jpg");
+  background-size: cover;
 }
 
 #plansRight
@@ -445,5 +477,10 @@ i
 	nav ul li a { float: none; margin-top: 0; display: block; }
 
 	nav { height: auto; position: relative; }
+
+  li
+  {
+    font-size: 1.2em;
+  }
 
 }

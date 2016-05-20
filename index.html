@@ -26,33 +26,6 @@
 			ga('send', 'pageview');
 		</script>
 
-			<?php
-					if (file_exists('useron.txt'))
-					{
-						$fil = fopen('useron.txt', r);
-
-						$dat = fread($fil, filesize('useron.txt'));
-
-						//echo $dat+1;
-
-						fclose($fil);
-
-						$fil = fopen('useron.txt', w);
-
-						fwrite($fil, $dat+1);
-					}
-					else
-					{
-						$fil = fopen('useron.txt', w);
-
-						fwrite($fil, 1);
-
-						//echo '1';
-
-						fclose($fil);
-					}
-				?>
-
 			<div id="container">
     	  <header>
 		  		<div class="width">
@@ -92,12 +65,12 @@
 											</div>
 											<p>
 												Hey i havent had much time with school to implemented anything major yet even though im recovering from a project deletion with no backup. Accidentaly having git delete my local repo which has set me back now 2,3 months.
-					  						Starting from a build 3 months ago ive decided it would be a good time to start rewriting the achirtecture removing the GameManager class object which starting becoiming too vague and too many responsiblities.
+					  						Starting from a build 3 months ago ive decided it would be a good time to start rewriting the achirtecture removing the GameManager class object which starting becoming too vague and too many responsiblities.
 											</p>
 						  				<img class="left" src="art-of-war/img/tgbu.gif" width="512" height="512" alt="Art of war mediolanum box art"/>
 
 											<p>
-												<a href="http://www.consciousinteractive.com/blog-6-god-object.html" class="button">Read more</a>
+												<a href="http://www.consciousinteractive.com/blog-7-god-object.html" class="button">Read more</a>
 						 					</p>
 											<p>
 											</p>
@@ -113,10 +86,10 @@
 						  				bit of time into it. Now that ive had my fallout fix. At the end of lvl 31. With a little over 3.5 full days of gameplay experienced,
 						  				i cant help but have a bittersweet feeling. Ive avoided most of the story. So i wont mention it too much or at all.
 					 					</p>
-						  			<a class="noUnderlineLink" href="http://www.consciousinteractive.com/blog-6-fallout.html"><img class="left" src="img/fallout4.png" title="fallout 4" width="512" height="512" alt="Art of War: Mediolanum box art"/></a>
+						  			<a class="noUnderlineLink" href="http://www.consciousinteractive.com/blog/blog-6-fallout.html"><img class="left" src="img/fallout4.png" title="fallout 4" width="512" height="512" alt="Art of War: Mediolanum box art"/></a>
 
 						  			<p>
-											<a href="http://www.consciousinteractive.com/blog-6-fallout.html" class="button">Read more</a>
+											<a href="http://www.consciousinteractive.com/blog/blog-6-fallout.html" class="button">Read more</a>
 						 				</p>
 										<p>
 										</p>

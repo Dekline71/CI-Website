@@ -14,117 +14,125 @@
 
 <body>
   <div class="container">
-  <div class="gfx"><span></span></div>
-  <div class="top">
-    <div class="navigation"> <a href="../index.php" id="selected">home</a> <a href="/blog.php">blog</a> <a href="/contact.php">contact info</a> <a href="/media.php">image gallery</a> <a href="/about.php">about</a> </div>
-    <div class="pattern"><span></span></div>
-    <div class="header">
-      <h1>Art of War</h1>
-      <p>Blog</p>
-    </div>
+    <div class="gfx"><span></span></div>
+      <div class="top">
+        <div class="navigation"> <a href="../index.php" id="selected">home</a> <a href="/blog.php">blog</a> <a href="/contact.php">contact info</a> <a href="/media.php">image gallery</a> <a href="/about.php">about</a> </div>
+          <div class="pattern"><span></span></div>
+            <div class="header">
+                <h1>Art of War</h1>
+                <p>Blog</p>
+            </div>
 
-    <div class="pattern"><span></span></div>
+            <div class="pattern"><span></span></div>
+      </div>
 
-  </div>
+      <div class="content">
 
-  <div class="content">
+        <div class="spacer"></div>
 
-  <div class="spacer"></div>
+	       <div class="item">
 
-	<div class="item">
+           <img class="center" src="" width="0" height="0" alt="Art of war mediolanum box art"/>
+           <div class="title">The Good the Bad and the Ugly Object</div>
 
-  <img class="center" src="" width="0" height="0" alt="Art of war mediolanum box art"/>
-  <div class="title">The Good the Bad and the Ugly Object</div>
+     	     <div class="metadata">March 7, 2016 by Jake Galletta </div>
 
-     	 <div class="metadata">March 7, 2016 by Jake Galletta </div>
+     	     <div class="body">
+             <p>
+               Hey i havent had much time with school to implemented anything major yet even though im recovering from a project deletion with no backup. Accidentaly having git delete my local repo which has set me back now 2,3 months.
+               <br>
+               Starting from a build 3 months ago ive decided it would be a good time to start rewriting the achirtecture removing the GameManager class object which starting becoming too vague and too many responsiblities.
+               I Deleted the latest version which had many more methods and variables. So what you will see below in my code ive pasted is an earlier version of the class before it got too out of hand.
+               I learned the hard way to make backups of your projects.
+             </p>
+             <code>
+               <pre>
+                 public class GameManager
+                 {
+	                  public static int gold;// players total gold
+	                  public static int food = 0;// players total gold
+	                  private static int xp;// players total experience gained
+	                  static Entity enemy;
+	                  static Barrack barrack;
+	                  static Tile tileMap[][];
+	                  String mapPath;
+	                  public static Level level;
+	                  public static int totalTurns; // total turns player has played during this game
+	                  public static int curTurn;
+	                  public static int prevTurn;
 
-     	 <div class="body">
-         <p>
-           Hey i havent had much time with school to implemented anything major yet even though im recovering from a project deletion with no backup. Accidentaly having git delete my local repo which has set me back now 2,3 months.
-           <br>
-           Starting from a build 3 months ago ive decided it would be a good time to start rewriting the achirtecture removing the GameManager class object which starting becoiming too vague and too many responsiblities.
-           I Deleted the latest version which had many more methods and variables. So what you will see below in my code ive pasted is an earlier version of the class before it got too out of hand.
-           I learned the hard way to make backups of your projects.
-         <p>
-<code>
-  <pre>
-  public class GameManager
-{
-	public static int gold;// players total gold
-	public static int food = 0;// players total gold
-	private static int xp;// players total experience gained
-	static Entity enemy;
-	static Barrack barrack;
-	static Tile tileMap[][];
-	String mapPath;
-	public static Level level;
-	public static int totalTurns; // total turns player has played during this game
-	public static int curTurn;
-	public static int prevTurn;
+	                  public GameManager()
+	                  {
+		                    tileMap = GameScreen.tileMap;
+		                    //setGold(0);
+		                    //gold = 1;
+		                    xp = 0;
+		                    curTurn = prevTurn = totalTurns = 1;
+		                    //mapPath = SampleGame.map;
+	                  }
 
-	public GameManager()
-	{
-		tileMap = GameScreen.tileMap;
-		//setGold(0);
-		//gold = 1;
-		xp = 0;
-		curTurn = prevTurn = totalTurns = 1;
-		//mapPath = SampleGame.map;
-	}
+	                  public GameManager(Level l)
+	                  {
+		                   level = l;
+		                   //setGold(100);
+		                   gold = 100;
+		                   food = 0;
+	                  }
 
-	public GameManager(Level l)
-	{
-		level = l;
-		//setGold(100);
-		gold = 100;
-		food = 0;
-	}
+	                  public static void spawn()
+	                  {
+		                   //level.spawn();
+	                  }
 
-	public static void spawn()
-	{
-		//level.spawn();
-	}
+                  	public static void update()
+                  	{
+                  		if(level != null)
+                  		{
+                  			spawn();
+                  		}
+                  	}
 
-	public static void update()
-	{
-		if(level != null)
-		{
-			spawn();
-		}
-	}
+                  	public Level getLevel()
+                  	{
+                  		return level;
+                  	}
 
-	public Level getLevel()
-	{
-		return level;
-	}
+                  	public int getGold()
+                  	{
+                  		return gold;
+                  	}
 
-	public int getGold()
-	{
-		return gold;
-	}
+                  	public void setGold(int g)
+                  	{
+                  		gold = g;
+                  	}
+                  }
+                </code>
 
-	public void setGold(int g)
-	{
-		gold = g;
-	}
-}
-
-</code>
-         <p></p>
-         <p>As i said Earlier, This class got big with too many vague responsiblities </p>
+                <p></p>
+                <p>As i said Earlier, This class got too big and i assigned it with too many responsiblities.
+                     The name fooManager is vague, which gives it a meaningless identifier.
+                     Probably giving it a more meaningful name could have avoided this.
+                     According to what is known as the single responsibility principle,
+                     each block should serve exactly one purpose.
+                     This is because with a "manager" class you are
+                     articficially dividing that responsibility in many respects.
+                     Managing many responsibilities instead of one.
+                </p>
 
 
 
-<p>
-<a href="https://twitter.com/ConsciousInt" class="twitter-follow-button" data-show-count="false">Follow @ConsciousInt_CJ</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+              <p>
+              <a href="https://twitter.com/ConsciousInt" class="twitter-follow-button" data-show-count="false">Follow @ConsciousInt_CJ</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
 
-	  <!--<a href="twitter.com/ConsciousInt" id="selected">twitter</a>
+              	  <!--<a href="twitter.com/ConsciousInt" id="selected">twitter</a>
 
-	  <a href="youtube.com/channel/UC9Sdi-DMaZ0kwxUb64q2n2Q" id="selected">youtube</a>-->
+              	  <a href="youtube.com/channel/UC9Sdi-DMaZ0kwxUb64q2n2Q" id="selected">youtube</a>-->
 
-    </div>
+                  </div>
 
-    </div>
+                  </div>
+                </div>
 
 
 </body>

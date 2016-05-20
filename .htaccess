@@ -1,0 +1,8 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.consciousinteractive\.com)(:80)? [NC]
+RewriteRule ^(.*) http://consciousinteractive.com/$1 [R=301,L]
+DirectoryIndex index.html
+order deny,allow
